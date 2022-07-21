@@ -32,6 +32,54 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size:contain;
+    position: relative;
+}
+
+.slide-frame {
+    width: 265px;
+    height: 555px;
+    position: absolute;
+    top: 27px;
+    left: 123px;
+    overflow: hidden;
+}
+
+
+
+.slide-frame .slide-carousel {
+    display: flex;
+    column-gap: 20px;
+    width: 500%;       
+    animation: slide 20s infinite;
+}
+
+.slide-frame .slide-carousel img:nth-child(2){
+    visibility: hidden;
+}
+
+
+
+@keyframes slide {
+    0% {margin-left: 0;}
+    5% {margin-left: 0;}
+    25% {margin-left: -101.5%;}
+    30% {margin-left: -101.5%;}
+    50% {margin-left: -203%;}
+    55% {margin-left: -203%;}
+    75% {margin-left: -305%;}
+    80% {margin-left: -305%;}
+    100% {margin-left: -407%;}
+}
+
+@keyframes flash {  
+    24% {opacity: 0;}
+    25% {opacity: 1;}
+    49% {opacity: 0;}
+    50% {opacity: 1;}
+    74% {opacity: 0;}
+    75% {opacity: 1;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 .login {
@@ -107,7 +155,7 @@ input::placeholder, input::placeholder{
 button {
     width: 270px;
     height: 30px;
-    margin-top: 10px;
+    margin-top: 20px;
     border-radius: 5px;
     border: none;
     background-color: #c3dbfc;
