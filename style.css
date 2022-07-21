@@ -46,40 +46,51 @@ body {
 
 
 
-.slide-frame .slide-carousel {
-    display: flex;
-    column-gap: 20px;
-    width: 500%;       
-    animation: slide 20s infinite;
+.slide-frame .slides {
+    width: 100%;       
+    position: relative;
+    
 }
 
-.slide-frame .slide-carousel img:nth-child(2){
+.slide-frame .slides img{
+    position: absolute;
+    transition: 1;
     visibility: hidden;
+    
+    opacity: 0;  
+    animation: flash 20s ease-in-out infinite;    
 }
 
-
-
-@keyframes slide {
-    0% {margin-left: 0;}
-    5% {margin-left: 0;}
-    25% {margin-left: -101.5%;}
-    30% {margin-left: -101.5%;}
-    50% {margin-left: -203%;}
-    55% {margin-left: -203%;}
-    75% {margin-left: -305%;}
-    80% {margin-left: -305%;}
-    100% {margin-left: -407%;}
+.slide-frame .slides img:nth-child(2){
+    animation-delay: 4s;
+}
+.slide-frame .slides img:nth-child(3){
+    animation-delay: 8s;
+}
+.slide-frame .slides img:nth-child(4){
+    animation-delay: 12s;
+}
+.slide-frame .slides img:nth-child(5){
+    animation-delay: 16s;
 }
 
 @keyframes flash {  
-    24% {opacity: 0;}
-    25% {opacity: 1;}
-    49% {opacity: 0;}
-    50% {opacity: 1;}
-    74% {opacity: 0;}
-    75% {opacity: 1;}
-    99% {opacity: 0;}
-    100% {opacity: 1;}
+    0%{
+        opacity: 0;    
+        visibility: hidden;        
+    }
+    2%{
+        visibility:visible;
+        opacity: 1;
+    }
+    18%{
+        visibility:visible;
+        opacity: 1;
+    }
+    20%, 100%{
+        opacity: 0;
+        visibility:hidden;        
+    }
 }
 
 .login {
