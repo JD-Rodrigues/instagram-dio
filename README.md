@@ -7,6 +7,6 @@ Esse projeto é um desafio da aula de CSS e Flexbox, do bootcamp Impulso Javascr
 * HTML
 * CSS
 
-[Clique aqui]() para ver a página online.
+[Clique aqui](https://jd-rodrigues.github.io/instagram-dio/) para ver a página online.
 
 ## 🚀 Obrigado pela visita! 🚀
