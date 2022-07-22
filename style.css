@@ -12,29 +12,31 @@ body {
     background-color: #fafafa;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .container{
     display: flex;
-    justify-content: space-between;
-    width: 780px;
+    /* justify-content: space-between; */
+    /* width: 780px; */
     height: 590px;
-    margin: auto;
-    margin-top: 28px;
-    column-gap: 25px;
-    border: 1px rgb(0, 81, 255) solid;
+    width: 100%;
+    justify-content: center;
+    /* margin-top: 28px; */
+    column-gap: 32px;
 }
 
 
 .phone{
-    width: 100%;
+    width: 380px;
     height: 100%;
-    border: 1px red solid;
+    margin-top: 32px;
     background-image: url('./img/back-image.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size:contain;
     position: relative;
+    display: none;
 }
 
 .slide-frame {
@@ -42,7 +44,7 @@ body {
     height: 555px;
     position: absolute;
     top: 27px;
-    left: 123px;
+    left: 111px;
     overflow: hidden;
 }
 
@@ -96,23 +98,24 @@ body {
 }
 
 .login {
-    width: 85%;
+    width: 348px;
     height: 100%;
-    border: 1px rgb(46, 151, 107) solid;
     display: flex;
     flex-direction: column;
+    align-items: center;
     row-gap: 13px;
-    margin-top: 10px;
 }
 
 .sign-in_card {
     width: 100%;
-    height: 395px;
-    border: 1px solid #e7e7e7;
+    height: 395px;    
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+
+
 
 .login .sign-in_card .logo {
     width: 175px;
@@ -234,10 +237,10 @@ input:focus ~ button {
 .sign-up_card {
     width: 100%;
     height: 65px;
-    border: 1px solid #e7e7e7;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .sign-up_card a {
@@ -248,7 +251,8 @@ input:focus ~ button {
 .download_card {
     width: 100%;
     height: auto;
-    border: 1px solid #e7e7e7;
+    padding-top: 10px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -271,21 +275,27 @@ input:focus ~ button {
 }
 
 footer{
-    width: 990px;
+    /* width: 990px; */
     margin: auto;
-    margin-top: 63px;
-    margin-bottom: 23px;
+    width: 100%;
+    padding-bottom: 63px;
+    padding-top: 63px;
     min-height:80px;
     display: flex;
     flex-direction: column;   
+    align-items: center;
     row-gap: 10px;   
+    white-space: nowrap;
 }
 
 footer .links, .links-second-line, .copy-lang{
+    width: 100%;
+    margin: auto;
     height: auto;
     display: flex;   
     flex-wrap: wrap; 
     column-gap: 15px;
+    row-gap: 10px;
     text-align:center;
     justify-content:space-evenly;
 }
@@ -312,6 +322,92 @@ footer select option{
     
 }
 
+@media (min-width:0){
+    input,button, .ou-divisor, .use-facebook{
+        min-width: 175px;
+        max-width: 210px;
+    } 
+    .download_card .stores{
+        flex-direction: column;
+        row-gap: 10px;
+        align-items: center;
+    }    
+    footer .links, .links-second-line, .copy-lang{
+        width: 223px;
+    }    
+}
 
+@media (min-width:279px){
+    .download_card .stores{
+        flex-direction: row;
+        column-gap: 10px;
+        align-items: center;
+    } 
+}
 
+@media (min-width:340px){
+    input,button, .ou-divisor, .use-facebook{
+        max-width: 260px;
+    }  
 
+    footer .links, .links-second-line, .copy-lang{
+        width: 308px;
+    }       
+}
+
+@media (min-width:389px){
+    input,button, .ou-divisor, .use-facebook{
+        max-width: 270px;
+    }  
+
+    footer .links, .links-second-line, .copy-lang{
+        width: 357px;
+    }       
+}
+
+@media (min-width:445px){
+    footer .links, .links-second-line, .copy-lang{
+        width: 413px;
+    }        
+}
+
+@media (min-width:451px){
+    .login{
+        margin-top: 42px;
+    }
+    .login .sign-in_card, .sign-up_card{
+        border: 1px solid #e7e7e7;
+        background-color: white;
+        width: 348px;
+    }
+}
+
+@media (min-width:551px){
+    footer .links, .links-second-line, .copy-lang{
+        width: 519px;
+    }        
+}
+
+@media (min-width:618px){
+    footer .links, .links-second-line, .copy-lang{
+        width: 586px;
+    }        
+}
+
+@media (min-width:703px){
+    footer .links, .links-second-line, .copy-lang{
+        width: 671px;
+    }        
+}
+
+@media (min-width:796px){
+    footer .links, .links-second-line, .copy-lang{
+        width: 764px;
+    }        
+}
+
+@media (min-width:876px){
+    .phone{
+        display: block;
+    }       
+}
