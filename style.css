@@ -413,6 +413,9 @@ footer select option{
 }
 
 @media (min-width:1036px){
+    footer{
+        margin-top: 35px;
+    }
     footer .links, .links-second-line, .copy-lang{
         width: 1004px;
     }       
