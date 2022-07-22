@@ -10,6 +10,8 @@
 
 body {
     background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
 }
 
 .container{
@@ -264,9 +266,52 @@ input:focus ~ button {
     height: 40px;
 }
 
-.download_card .stores div img{
-    
+.download_card .stores div img{    
     width: 100%;
 }
+
+footer{
+    width: 990px;
+    margin: auto;
+    margin-top: 63px;
+    margin-bottom: 23px;
+    min-height:80px;
+    display: flex;
+    flex-direction: column;   
+    row-gap: 10px;   
+}
+
+footer .links, .links-second-line, .copy-lang{
+    height: auto;
+    display: flex;   
+    flex-wrap: wrap; 
+    column-gap: 15px;
+    text-align:center;
+    justify-content:space-evenly;
+}
+
+footer .links-second-line, .copy-lang{
+     justify-content: center;
+     align-items:center;
+}
+
+footer .copy-lang{
+    margin-top: 10px;
+}
+
+footer a, .copy-lang select, .copy{
+    font-size: 12px;
+    color: #8e8e8e;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+footer select option{
+    text-align:end;
+    
+}
+
+
 
 
