@@ -411,3 +411,9 @@ footer select option{
         display: block;
     }       
 }
+
+@media (min-width:1036px){
+    footer .links, .links-second-line, .copy-lang{
+        width: 1004px;
+    }       
+}    
